@@ -1,144 +1,108 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="el">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        header {
-            background: #172554;
-            color: white;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
-
-        .hero {
-            background: #dbeafe;
-            text-align: center;
-            padding: 100px 20px;
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
-
-        .button {
-            display: inline-block;
-            background: #172554;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        section {
-            padding: 65px 10%;
-            text-align: center;
-        }
-
-        section h2 {
-            margin-bottom: 20px;
-        }
-
-        .services {
-            background: #f1f5f9;
-        }
-
-        footer {
-            background: #172554;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            nav a {
-                margin: 0 7px;
-            }
-
-            .hero h1 {
-                font-size: 30px;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ee">
+  <meta name="description" content="Progression Services — επαγγελματική διαχείριση ακινήτων και συμβουλευτικές υπηρεσίες σε όλη την Ελλάδα.">
+  <title>Progression Services | Property Management & Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Progression Services home">
+      <span class="wordmark-name">PROGRESSION</span><span class="wordmark-sub">SERVICES</span>
+    </a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="#about" data-i18n="navAbout">Σχετικά</a>
+      <a href="#services" data-i18n="navServices">Υπηρεσίες</a>
+      <a href="#portfolio" data-i18n="navPortfolio">Ακίνητα</a>
+      <a href="#contact" data-i18n="navContact">Επικοινωνία</a>
+      <button class="language-toggle" type="button" aria-label="Switch language">EN</button>
+    </nav>
+  </header>
 
-    <header>
-        <h2>My Website</h2>
-
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <div class="hero" id="home">
-        <h1>Welcome to My Website</h1>
-        <p>A simple website built and hosted for free.</p>
-        <a href="#about" class="button">Learn More</a>
-    </div>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>
-            Welcome to my website. This is where I can introduce
-            myself, my company, my projects or my ideas.
-        </p>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="eyebrow">ΔΙΑΧΕΙΡΙΣΗ ΑΚΙΝΗΤΩΝ & ΣΥΜΒΟΥΛΕΥΤΙΚΗ</p>
+        <h1 data-i18n="heroTitle">Φροντίδα για το ακίνητό σας.<br><em>Εμπιστοσύνη σε κάθε βήμα.</em></h1>
+        <p class="hero-description" data-i18n="heroText">Ολοκληρωμένες υπηρεσίες διαχείρισης και συμβουλευτικής ακινήτων, με συνέπεια, διαφάνεια και προσωπική προσέγγιση σε όλη την Ελλάδα.</p>
+        <a class="button button-dark" href="#contact" data-i18n="heroButton">Επικοινωνήστε μαζί μας <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-image-wrap">
+        <img class="hero-image" src="images/property-terrace.jpeg" alt="Ευρύχωρη βεράντα κατοικίας με θέα σε μαρίνα">
+        <span class="image-note" data-i18n="heroCaption">Επιλεγμένα ακίνητα · Ελλάδα</span>
+      </div>
     </section>
 
-    <section class="services" id="services">
-        <h2>What We Do</h2>
-        <p>
-            Add information about your services, projects,
-            products or anything you want to showcase here.
-        </p>
+    <section class="intro section-pad" id="about">
+      <p class="eyebrow" data-i18n="aboutEyebrow">ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ</p>
+      <div class="intro-grid">
+        <h2 data-i18n="aboutTitle">Η σωστή διαχείριση<br>κάνει τη διαφορά.</h2>
+        <div>
+          <p data-i18n="aboutText">Η Progression Services προσφέρει υπηρεσίες διαχείρισης και συμβουλευτικής για οικιστικά και επιλεγμένα επαγγελματικά ακίνητα. Στόχος μας είναι να υποστηρίζουμε ιδιοκτήτες με υπευθυνότητα, πρακτική σκέψη και σταθερή επικοινωνία.</p>
+          <p class="muted" data-i18n="aboutText2">Κάθε ακίνητο έχει τις δικές του ανάγκες. Προσεγγίζουμε κάθε συνεργασία με προσοχή στη λεπτομέρεια και λύσεις που ανταποκρίνονται στις πραγματικές ανάγκες του ιδιοκτήτη.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: yourname@example.com</p>
+    <section class="services section-pad" id="services">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="servicesEyebrow">ΤΙ ΠΡΟΣΦΕΡΟΥΜΕ</p><h2 data-i18n="servicesTitle">Υπηρεσίες με ουσία.</h2></div>
+        <p class="section-side-note" data-i18n="servicesIntro">Υποστήριξη για την καθημερινή λειτουργία και τη μακροπρόθεσμη αξιοποίηση του ακινήτου σας.</p>
+      </div>
+      <div class="service-list">
+        <article class="service-item"><span>01</span><div><h3 data-i18n="service1Title">Διαχείριση κατοικιών</h3><p data-i18n="service1Text">Οργάνωση και συντονισμός θεμάτων που αφορούν τη διαχείριση και τη φροντίδα κατοικιών.</p></div><span class="service-arrow">↗</span></article>
+        <article class="service-item"><span>02</span><div><h3 data-i18n="service2Title">Διαχείριση επαγγελματικών ακινήτων</h3><p data-i18n="service2Text">Πρακτική υποστήριξη για επιλεγμένα μικρά επαγγελματικά ακίνητα.</p></div><span class="service-arrow">↗</span></article>
+        <article class="service-item"><span>03</span><div><h3 data-i18n="service3Title">Συμβουλευτικές υπηρεσίες</h3><p data-i18n="service3Text">Καθοδήγηση και υποστήριξη σε ζητήματα που σχετίζονται με τη διαχείριση ακινήτων.</p></div><span class="service-arrow">↗</span></article>
+      </div>
+      <p class="disclaimer" data-i18n="servicesDisclaimer">Το ακριβές αντικείμενο κάθε συνεργασίας διαμορφώνεται ανάλογα με τις ανάγκες του ακινήτου και κατόπιν συνεννόησης.</p>
     </section>
 
-    <footer>
-        <p>© 2026 My Website. All rights reserved.</p>
-    </footer>
+    <section class="portfolio section-pad" id="portfolio">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="portfolioEyebrow">ΕΝΔΕΙΚΤΙΚΟ PORTFOLIO</p><h2 data-i18n="portfolioTitle">Χώροι με χαρακτήρα.</h2></div>
+        <p class="section-side-note" data-i18n="portfolioIntro">Μια πρώτη ματιά σε οικιστικά ακίνητα από το portfolio μας.</p>
+      </div>
+      <div class="gallery">
+        <figure class="gallery-large"><button class="gallery-button" type="button" aria-label="View terrace photograph"><img src="images/property-terrace.jpeg" alt="Βεράντα κατοικίας με καθιστικό και θέα στη μαρίνα"></button><figcaption><span data-i18n="gallery1">Κατοικία με ευρύχωρη βεράντα</span><span>01 / 02</span></figcaption></figure>
+        <figure class="gallery-small"><button class="gallery-button" type="button" aria-label="View courtyard photograph"><img src="images/property-courtyard.jpeg" alt="Περιποιημένος κοινόχρηστος κήπος οικιστικού συγκροτήματος"></button><figcaption><span data-i18n="gallery2">Κοινόχρηστοι εξωτερικοί χώροι</span><span>02 / 02</span></figcaption></figure>
+      </div>
+    </section>
 
+    <section class="contact section-pad" id="contact">
+      <div class="contact-copy">
+        <p class="eyebrow" data-i18n="contactEyebrow">ΕΠΙΚΟΙΝΩΝΙΑ</p>
+        <h2 data-i18n="contactTitle">Ας συζητήσουμε<br><em>τι χρειάζεται το ακίνητό σας.</em></h2>
+        <p data-i18n="contactText">Επικοινωνήστε μαζί μας για να συζητήσουμε τις ανάγκες σας και να εξετάσουμε πώς μπορούμε να βοηθήσουμε.</p>
+      </div>
+      <div class="contact-details">
+        <p class="detail-label" data-i18n="contactEmailLabel">EMAIL</p>
+        <a href="mailto:ADD-COMPANY-EMAIL@example.com" class="contact-link">ADD-COMPANY-EMAIL@example.com</a>
+        <p class="detail-label" data-i18n="contactPhoneLabel">ΤΗΛΕΦΩΝΟ</p>
+        <span class="contact-link" data-i18n="phonePlaceholder">Προσθέστε αριθμό τηλεφώνου</span>
+        <p class="detail-label" data-i18n="contactAreaLabel">ΠΕΡΙΟΧΗ ΕΞΥΠΗΡΕΤΗΣΗΣ</p>
+        <span class="contact-link" data-i18n="areaValue">Σε όλη την Ελλάδα</span>
+        <a class="button button-light" href="mailto:ADD-COMPANY-EMAIL@example.com" data-i18n="contactButton">Στείλτε μας email <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark footer-wordmark" href="#home"><span class="wordmark-name">PROGRESSION</span><span class="wordmark-sub">SERVICES</span></a>
+    <p data-i18n="footerText">Διαχείριση ακινήτων & συμβουλευτική · Ελλάδα</p>
+    <span>© <span id="year"></span> PROGRESSION SERVICES</span>
+  </footer>
+
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Property photograph" hidden>
+    <button class="lightbox-close" aria-label="Close photograph">×</button>
+    <img src="" alt="">
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
